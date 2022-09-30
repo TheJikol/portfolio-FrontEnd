@@ -1,128 +1,50 @@
 *{
+    margin: 0;
+    padding: 0;
     font-family: 'Bebas Neue', cursive;
 }
 
-.row{
-    margin: 90px 0;
-}
-
-.presentation{
-    color: white;
-}
-
-h1, h2{
+.containerbackground{
     position: relative;
-    z-index: 3000;
-    font-size: 5.625rem;
+    min-height: 300px;
 }
 
-.bio{
+h2{
+    font-size: 4rem;
     color: black;
+    margin-top: 120px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
-.myname{
-    background: linear-gradient(153deg, rgba(33,83,196,1) 0%, rgba(116,29,255,1) 75%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.experienciecontainer{
+    background-color: rgb(0, 0, 0);
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 1s all ease;
+    border: solid 3px white;
+    box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -moz-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
 }
 
-.colbioimg{
-    text-align: end;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-.bioimg{
-    margin-bottom: 50px;
-    transition: 10s ease;
-    animation-name: image;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-@keyframes  image{
-    0%{
-        translate: 0 -15px;
-    }
-    50%{
-        translate: 0 30px;
-    }
-    100%{
-        translate: 0 -15px;
-    }
+.experienciecontainer:hover{
+    transform: scale(1.04);
 }
 
 p{
-    color: black;
-    font-size: 1.75rem;
-    letter-spacing: 0.13rem;
+    color: white;
+    font-size: 1.5rem;
 }
 
-.biography-text{
-    margin-top: 120px;
-    background-image: url(../../../assets/images/rg1024-Moon-in-comic-style.svg);
-    background-size: 2500px;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    height: 900px;
-    transition: 10s ease;
-    animation-name: moon;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
--webkit-box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
--moz-box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
-}
-
-@keyframes  moon{
-    0%{
-        translate: 0 30px;
-    }
-    50%{
-        translate: 0 -20px;
-    }
-    100%{
-        translate: 0 30px;
-    }
-}
-
-@media (max-width: 1200px){
-    .colbioimg{
-        text-align: center;
-    }
-    .presentation{
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px){
-    p{
-        font-size: 1.4rem;
-        margin-bottom: 90px;
-    }
-}
-
-@media (max-width: 386px){
-    p{
-        font-size: 1.1rem;
-        margin-bottom: 70px;
-    }
-}
-
-@media (max-width: 400px){
-    h1, h2{
-        font-size: 4.3rem;
-    }
+.experiencieimage{
+    width: 90%;
+    border-radius: 20px;
+    border: 3px solid black;
 }
 
 .stars1{

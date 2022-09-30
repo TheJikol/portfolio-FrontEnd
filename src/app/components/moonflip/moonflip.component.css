@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.moon{
+    margin-bottom: 50px;
+    margin-top: 120px;
+    background-image: url(../../../assets/images/rg1024-Moon-in-comic-style.svg);
+    background-size: 2500px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 900px;
+    transition: 10s ease;
+    animation-name: moon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    box-shadow: 1px -17px 11px 5px rgba(116, 29, 255,0.75);
+-webkit-box-shadow: 1px -17px 11px 5px rgba(116, 29, 255,0.75);
+-moz-box-shadow: 1px -17px 11px 5px rgba(116, 29, 255,0.75);
+}
+
+@keyframes  moon{
+    0%{
+        translate: 0 30px;
+    }
+    50%{
+        translate: 0 -20px;
+    }
+    100%{
+        translate: 0 30px;
+    }
+}
+
+p{
+    color: black;
+    font-size: 1.75rem;
+    letter-spacing: 0.13rem;
+}
+h2{
+    margin-top: 100px;
+    display: block;
+    color: black;
+    font-size: 5.625rem;
+}
+
+.container{
+    flex-direction: column;
+    width: 100%;
+}
