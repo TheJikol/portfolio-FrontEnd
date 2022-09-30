@@ -15,7 +15,7 @@ h1, h2{
 }
 
 .myname{
-    background: linear-gradient(153deg, rgba(33,83,196,1) 0%, rgba(133,29,255,1) 75%);
+    background: linear-gradient(153deg, rgba(33,83,196,1) 0%, rgba(116,29,255,1) 75%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -59,7 +59,7 @@ p{
     color: black;
     font-size: 1.75rem;
     letter-spacing: 0.13rem;
-    margin-bottom: 70px;
+
     
 }
 
@@ -69,13 +69,15 @@ p{
     background-size: 2500px;
     background-position-x: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 900px;
     transition: 10s ease;
     animation-name: moon;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    border-bottom: 5px solid rgba(133,29,255,1);
+    box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
+-webkit-box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
+-moz-box-shadow: 1px 17px 11px 5px rgba(116, 29, 255,0.75);
 }
 
 @keyframes  moon{
