@@ -1,0 +1,77 @@
+*{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.row{
+    margin: 90px 0;
+}
+
+.presentation{
+    color: white;
+}
+
+h1, h2{
+    font-size: 5.625rem;
+}
+
+.myname{
+    background: linear-gradient(153deg, rgba(33,83,196,1) 0%, rgba(133,29,255,1) 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.colbioimg{
+    text-align: end;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.bioimg{
+    margin-bottom: 50px;
+    transition: 10s ease;
+    animation-name: image;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes  image{
+    0%{
+        translate: 0 -15px;
+    }
+    50%{
+        translate: 0 30px;
+    }
+    100%{
+        translate: 0 -15px;
+    }
+}
+
+p{
+    color: white;
+    font-size: 1.75rem;
+    letter-spacing: 0.13rem;
+}
+
+@media (max-width: 1200px){
+    .colbioimg{
+        text-align: center;
+    }
+    .presentation{
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px){
+    h1, h2{
+        font-size: 4.3rem;
+    }
+}
