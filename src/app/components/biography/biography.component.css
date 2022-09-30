@@ -56,9 +56,38 @@ h1, h2{
 }
 
 p{
-    color: white;
+    color: black;
     font-size: 1.75rem;
     letter-spacing: 0.13rem;
+    margin-bottom: 70px;
+    
+}
+
+.biography-text{
+    margin-top: 120px;
+    background-image: url(../../../assets/images/rg1024-Moon-in-comic-style.svg);
+    background-size: 2500px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    transition: 10s ease;
+    animation-name: moon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    border-bottom: 5px solid rgba(133,29,255,1);
+}
+
+@keyframes  moon{
+    0%{
+        translate: 0 30px;
+    }
+    50%{
+        translate: 0 -20px;
+    }
+    100%{
+        translate: 0 30px;
+    }
 }
 
 @media (max-width: 1200px){
@@ -67,6 +96,20 @@ p{
     }
     .presentation{
         text-align: center;
+    }
+}
+
+@media (max-width: 768px){
+    p{
+        font-size: 1.4rem;
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 386px){
+    p{
+        font-size: 1.1rem;
+        margin-bottom: 70px;
     }
 }
 
