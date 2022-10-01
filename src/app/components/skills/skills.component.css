@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+    font-size: 4rem;
+    color: black;
+    margin-top: 120px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cardp{
+    width: 270px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+    border-radius: 20px;
+    border: solid 3px white;
+    box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -moz-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+}
+
+
+img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.progresscircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.percent{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    transform: rotate(270deg);
+    box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    -moz-box-shadow: 0px 0px 14px 5px rgba(116,29,255,0.75);
+    border-radius: 50%;
+}
+
+svg{
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 15;
+    stroke: rgb(136, 136, 136);
+    transform: translate(15px, 15px);
+}
+
+circle:nth-child(2){
+    stroke: var(--crl);
+    stroke-dasharray: 515;
+    stroke-dashoffset: calc(515 - (515* var(--num) / 100))
+}
+
+.number{
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotate(-270deg);
+}
+
+.percentnumber{
+    text-decoration: none;
+    font-size: 40px;
+    margin-bottom: 110px;
+}

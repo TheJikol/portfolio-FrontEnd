@@ -21,6 +21,10 @@
     min-height: 120px;
 }
 
+.navbar-collapse{
+    z-index: 2;
+}
+
 .APLogo{
     margin: 0;
     width: 150px;
@@ -42,14 +46,8 @@
 
 }
 
-.nav-item:nth-child(-n+3) .nav-link:hover{
+.nav-item:nth-child(-n+6) .nav-link:hover{
     color: rgba(33,83,196,1)!important;
-}
-
-.nav-item:last-child .nav-link{
-    background: linear-gradient(40deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 18%, rgba(214,41,118,1) 41%, rgba(150,47,191,1) 66%, rgba(79,91,213,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .nav-link::after{
@@ -68,12 +66,18 @@
     transform: scale(1, 1);
 }
 
-.nav-item:nth-child(4) .nav-link:hover{
+.nav-item:nth-child(7) .nav-link:hover{
     color: rgb(0, 206, 0)!important;
 }
 
 .navbar-nav:last-child{
-    margin-right: 25%;
+    margin-right: 20px;
+}
+
+@media (max-width: 1200px){
+    .nav-item{
+        margin: 0 10px;
+    }
 }
 
 @media (max-width: 991px){
