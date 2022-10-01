@@ -21,6 +21,10 @@
     min-height: 120px;
 }
 
+.navbar-collapse{
+    z-index: 2;
+}
+
 .APLogo{
     margin: 0;
     width: 150px;
@@ -68,6 +72,12 @@
 
 .navbar-nav:last-child{
     margin-right: 20px;
+}
+
+@media (max-width: 1200px){
+    .nav-item{
+        margin: 0 10px;
+    }
 }
 
 @media (max-width: 991px){

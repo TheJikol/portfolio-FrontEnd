@@ -1,0 +1,65 @@
+<div class="containerbackground d-flex justify-content-center">
+    <div class="container text-center">
+        <h2 id="skills">Skills</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 center">
+                    <div class="row cardp">
+                        <div class="col-12">
+                            <img src="../../../assets/images/HTMLLOGO.png" alt="">
+                        </div>
+                        <div class="col-12 circlep">
+                            <div class="barp"></div>
+                            <div class="boxp"><span>80%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 center">
+                    <div class="row cardp">
+                        <div class="col-12">
+                            <img src="../../../assets/images/CSSLOGO.png" alt="">
+                        </div>
+                        <div class="col-12 circlep">
+                            <div class="barp"></div>
+                            <div class="boxp"><span>80%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 center">
+                    <div class="row cardp">
+                        <div class="col-12">
+                            <img src="../../../assets/images/JSLOGO.png" alt="">
+                        </div>
+                        <div class="col-12 circlep">
+                            <div class="barp"></div>
+                            <div class="boxp"><span>80%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 center">
+                    <div class="row cardp">
+                        <div class="col-12">
+                            <img src="../../../assets/images/BootstrapLOGO.png" alt="">
+                        </div>
+                        <div class="col-12 circlep">
+                            <div class="barp"></div>
+                            <div class="boxp"><span>80%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let options = {
+        startAngle: -1.55,
+        size: 200,
+        value: 0.80,
+        fill: {color: "red"}
+    }
+    $(".barp").circleProgress(opstions).on('circle-animation-progress', function(event, progress, stepvalue){
+
+    });
+</script>

@@ -9,6 +9,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { MoonflipComponent } from './components/moonflip/moonflip.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MoonflipComponent } from './components/moonflip/moonflip.component';
     ExperienceComponent,
     EducationComponent,
     ProjectsComponent,
-    MoonflipComponent
+    MoonflipComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
