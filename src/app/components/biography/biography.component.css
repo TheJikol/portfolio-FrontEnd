@@ -38,7 +38,7 @@ h2 {
 
 .bioimg {
     position: relative;
-    z-index: 4;
+    z-index: 5;
     margin-bottom: 50px;
     transition: 10s ease;
     animation-name: image;
@@ -73,6 +73,8 @@ p {
 }
 
 .biography-text {
+    position: relative;
+    z-index: 3;
     margin-top: 120px;
     background-image: url(../../../assets/images/rg1024-Moon-in-comic-style.svg);
     background-size: 2500px;
@@ -132,7 +134,7 @@ p {
 .rocket {
     height: 250px;
     width: 250px;
-    z-index: 1;
+    z-index: 4;
     background-image: url(../../../assets/images/starting-rocket.svg);
     background-position: center;
     background-size: cover;
