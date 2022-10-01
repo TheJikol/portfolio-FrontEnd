@@ -97,3 +97,11 @@ circle:nth-child(2){
     font-size: 40px;
     margin-bottom: 110px;
 }
+
+.cardp{
+    transition: 1s all ease;
+}
+
+.cardp:hover{
+    transform: scale(1.06);
+}
