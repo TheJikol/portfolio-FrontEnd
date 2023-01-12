@@ -1,0 +1,27 @@
+<div class="modal fade" id="biographyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="biographyModalLabel">Editar Biografia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <label class="form-label">Contenido</label> <br>
+                    <input #content type="text" value="{{biographies.content}}" [ngClass]="{'is-invalid': Content?.errors && Content?.touched, 'is-valid': !Content?.errors &&
+                    Content?.touched}" class="form-control" id="content">
+                    <div *ngIf="Content?.errors && Content?.touched">
+                        <p *ngIf="Content?.hasError('required')" class="text-danger">
+                            El nombre de usuario es requerido
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="editBiography(content.value)">Save
+                            changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<div class="modal fade" id="skillCreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="skillCreateModalLabel">Crear Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <label class="form-label">Porcentaje</label> <br>
+                    <input #percent value="0" type="number" formControlName="percent" [ngClass]="{'is-invalid': Percent?.errors && Percent?.touched, 'is-valid': !Percent?.errors &&
+                    Percent?.touched}" class="form-control" id="percent">
+                    <div *ngIf="Percent?.errors && Percent?.touched">
+                        <p *ngIf="Percent?.hasError('required')" class="text-danger">
+                            El porcentaje es requerido
+                        </p>
+                    </div>
+                    <label class="form-label">URL Imagen</label> <br>
+                    <input #image type="text" formControlName="image" [ngClass]="{'is-invalid': Image?.errors && Image?.touched, 'is-valid': !Image?.errors &&
+                    Image?.touched}" class="form-control" id="image">
+                    <div *ngIf="Image?.errors && Image?.touched">
+                        <p *ngIf="Image?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"
+                            (click)="createSkill(percent.value, image.value)">Save
+                            changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="skillDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="skillDeleteModalLabel">Eliminar Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let skill of skills" class="imageContainer">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{{skill.image}}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <button (click)="deleteSkill(skill.id)" data-bs-dismiss="modal"
+                                class="delete">ELiminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="skillEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="skillEditModalLabel">Editar Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let skill of skills" class="imageContainer">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{{skill.image}}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <button data-bs-target="#editSkiElementModal" data-bs-toggle="modal"
+                                class="delete" (click)="saveId(skill.id, skill)">Editar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editSkiElementModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="skillEditModalLabel">Editar Skills</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <label class="form-label">Porcentaje</label> <br>
+                    <input #percentTwo type="number" value="{{skillToEdit.percent}}" [ngClass]="{'is-invalid': Percent?.errors && Percent?.touched, 'is-valid': !Percent?.errors &&
+                    Percent?.touched}" class="form-control" id="percent">
+                    <div *ngIf="Percent?.errors && Percent?.touched">
+                        <p *ngIf="Percent?.hasError('required')" class="text-danger">
+                            El contenido es requerido
+                        </p>
+                    </div>
+                    <label class="form-label">URL Imagen</label> <br>
+                    <input #imageTwo type="text" value="{{skillToEdit.image}}" [ngClass]="{'is-invalid': Image?.errors && Image?.touched, 'is-valid': !Image?.errors &&
+                    Image?.touched}" class="form-control" id="image">
+                    <div *ngIf="Image?.errors && Image?.touched">
+                        <p *ngIf="Image?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"
+                            (click)="editSkill(percentTwo.value, imageTwo.value)">Save
+                            changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

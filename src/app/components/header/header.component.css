@@ -31,7 +31,9 @@
 }
 
 .nav-item{
-    margin: 0 20px;
+    min-width: 140px;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link{
@@ -42,8 +44,7 @@
 }
 
 .nav-link:hover{
-    letter-spacing: 5px;
-
+    letter-spacing: 3px;
 }
 
 .nav-item:nth-child(-n+6) .nav-link:hover{
@@ -72,6 +73,10 @@
 
 .navbar-nav:last-child{
     margin-right: 20px;
+}
+
+a{
+    cursor: pointer;
 }
 
 @media (max-width: 1200px){

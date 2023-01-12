@@ -1,0 +1,143 @@
+<div class="modal fade" id="projectCreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="projectCreateModalLabel">Crear Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <label class="form-label">Contenido</label> <br>
+                    <input value="hola" #content type="text" formControlName="content" [ngClass]="{'is-invalid': Content?.errors && Content?.touched, 'is-valid': !Content?.errors &&
+                    Content?.touched}" class="form-control" id="content">
+                    <div *ngIf="Content?.errors && Content?.touched">
+                        <p *ngIf="Content?.hasError('required')" class="text-danger">
+                            El contenido es requerido
+                        </p>
+                    </div>
+                    <label class="form-label">URL Imagen</label> <br>
+                    <input #image type="text" formControlName="image" [ngClass]="{'is-invalid': Image?.errors && Image?.touched, 'is-valid': !Image?.errors &&
+                    Image?.touched}" class="form-control" id="image">
+                    <div *ngIf="Image?.errors && Image?.touched">
+                        <p *ngIf="Image?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <label class="form-label">Link de projecto</label> <br>
+                    <input #link type="text"  [ngClass]="{'is-invalid': Link?.errors && Link?.touched, 'is-valid': !Link?.errors &&
+                    Link?.touched}" class="form-control" id="link">
+                    <div *ngIf="Link?.errors && Link?.touched">
+                        <p *ngIf="Link?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"
+                            (click)="createProject(content.value, image.value, link.value)">Save
+                            changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="projectDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="projectDeleteModalLabel">Eliminar Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let project of projects" class="imageContainer">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{{project.image}}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <button (click)="deleteProject(project.id)" data-bs-dismiss="modal"
+                                class="delete">ELiminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="projectEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="projectEditModalLabel">Editar Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let project of projects" class="imageContainer">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{{project.image}}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <button data-bs-target="#editProElementModal" data-bs-toggle="modal"
+                                class="delete" (click)="saveId(project.id, project)">Editar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editProElementModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="projectEditModalLabel">Editar Experiencia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <label class="form-label">Contenido</label> <br>
+                    <input #contentTwo type="text" value="{{projectToEdit.content}}" [ngClass]="{'is-invalid': Content?.errors && Content?.touched, 'is-valid': !Content?.errors &&
+                    Content?.touched}" class="form-control" id="content">
+                    <div *ngIf="Content?.errors && Content?.touched">
+                        <p *ngIf="Content?.hasError('required')" class="text-danger">
+                            El contenido es requerido
+                        </p>
+                    </div>
+                    <label class="form-label">URL Imagen</label> <br>
+                    <input #imageTwo type="text" value="{{projectToEdit.image}}" [ngClass]="{'is-invalid': Image?.errors && Image?.touched, 'is-valid': !Image?.errors &&
+                    Image?.touched}" class="form-control" id="image">
+                    <div *ngIf="Image?.errors && Image?.touched">
+                        <p *ngIf="Image?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <label class="form-label">Link de projecto</label> <br>
+                    <input #linkTwo type="text" value="{{projectToEdit.link}}" [ngClass]="{'is-invalid': Link?.errors && Link?.touched, 'is-valid': !Link?.errors &&
+                    Link?.touched}" class="form-control" id="link">
+                    <div *ngIf="Link?.errors && Link?.touched">
+                        <p *ngIf="Link?.hasError('required')" class="text-danger">
+                            La URL es requerida
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary"
+                            (click)="editProject(contentTwo.value, imageTwo.value, linkTwo.value)">Save
+                            changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

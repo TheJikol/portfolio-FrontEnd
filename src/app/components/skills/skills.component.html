@@ -3,80 +3,20 @@
         <h2 id="skills">Skills</h2>
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-md-6 center">
+                <div *ngFor="let skill of skills" class="col-xl-3 col-md-6 center">
                     <div class="row cardp">
                         <div class="col-12">
-                            <img src="../../../assets/images/HTMLLOGO.png" alt="">
+                            <img src="{{skill.image}}" alt="">
                         </div>
                         <div class="col-12">
                             <div class="progresscircle">
-                                <div class="percent" style="--crl:rgb(255, 255, 255);--num:95;">
+                                <div class="percent" style="--crl:rgb(255, 255, 255);--num:{{skill.percent}};">
                                     <svg>
                                         <circle cx="75" cy="75" r="82"></circle>
                                         <circle cx="75" cy="75" r="82"></circle>
                                     </svg>
                                     <div class="number">
-                                        <h2 class="percentnumber">95%</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 center">
-                    <div class="row cardp">
-                        <div class="col-12">
-                            <img src="../../../assets/images/CSSLOGO.png" alt="">
-                        </div>
-                        <div class="col-12">
-                            <div class="progresscircle">
-                                <div class="percent" style="--crl:rgb(255, 255, 255);--num:90;">
-                                    <svg>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <h2 class="percentnumber">90%</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 center">
-                    <div class="row cardp">
-                        <div class="col-12">
-                            <img src="../../../assets/images/JSLOGO.png" alt="">
-                        </div>
-                        <div class="col-12">
-                            <div class="progresscircle">
-                                <div class="percent" style="--crl:rgb(255, 255, 255);--num:70;">
-                                    <svg>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <h2 class="percentnumber">70%</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 center">
-                    <div class="row cardp">
-                        <div class="col-12">
-                            <img src="../../../assets/images/BootstrapLOGO.png" alt="">
-                        </div>
-                        <div class="col-12">
-                            <div class="progresscircle">
-                                <div class="percent" style="--crl:rgb(255, 255, 255);--num:80;">
-                                    <svg>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                        <circle cx="75" cy="75" r="82"></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <h2 class="percentnumber">80%</h2>
+                                        <h2 class="percentnumber">{{skill.percent}}</h2>
                                     </div>
                                 </div>
                             </div>

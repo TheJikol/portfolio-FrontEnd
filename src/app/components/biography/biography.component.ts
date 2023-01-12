@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BiographyService } from 'src/app/services/biography.service';
 
 @Component({
   selector: 'app-biography',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./biography.component.css']
 })
 export class BiographyComponent implements OnInit {
-
-  constructor() { }
+  myBiography:any;
+  constructor(private BiographyData:BiographyService) { }
 
   ngOnInit(): void {
+    this.BiographyData.viewBiography().subscribe(data =>{
+      this.myBiography = data.content
+    })
   }
 
 }

@@ -9,6 +9,15 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  experienceButton(id:string){
+    let doc:HTMLElement = document.getElementById(id)!
+      doc.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
   ngOnInit(): void {
   }
 
