@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+.containererror{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-size: 100px;
+}
+
+p{
+    font-size: 50px
+}
