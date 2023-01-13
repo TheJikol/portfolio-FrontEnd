@@ -28,6 +28,7 @@ import { ProjectService } from './services/project.service';
 import { SkillService } from './services/skill.service';
 import { ExperienceService } from './services/experience.service';
 import { ConmodalComponent } from './components/dashboard/modals/conmodal/conmodal.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ConmodalComponent } from './components/dashboard/modals/conmodal/conmod
     PromodalComponent,
     SkimodalComponent,
     ConmodalComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,

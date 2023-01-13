@@ -8,7 +8,7 @@ import { Skill } from '../models/Skill';
 })
 export class SkillService {
 
-    url:String = "http://localhost:8080/api/";
+    url:String = "https://portfoliobackend-lh3i.onrender.com/api/";
     constructor(private http:HttpClient) {
     }
   

@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="projectCreateModalLabel">Crear Experiencia</h1>
+                <h1 class="modal-title fs-5" id="projectCreateModalLabel">Crear Proyecto</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -23,8 +23,8 @@
                             La URL es requerida
                         </p>
                     </div>
-                    <label class="form-label">Link de projecto</label> <br>
-                    <input #link type="text"  [ngClass]="{'is-invalid': Link?.errors && Link?.touched, 'is-valid': !Link?.errors &&
+                    <label class="form-label">Link de proyecto</label> <br>
+                    <input #link type="text" formControlName="link" [ngClass]="{'is-invalid': Link?.errors && Link?.touched, 'is-valid': !Link?.errors &&
                     Link?.touched}" class="form-control" id="link">
                     <div *ngIf="Link?.errors && Link?.touched">
                         <p *ngIf="Link?.hasError('required')" class="text-danger">
@@ -32,10 +32,9 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary"
-                            (click)="createProject(content.value, image.value, link.value)">Save
-                            changes</button>
+                            (click)="createProject(content.value, image.value, link.value)">Guardar cambios</button>
                     </div>
                 </form>
             </div>
@@ -63,7 +62,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -90,7 +89,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -133,8 +132,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"
-                            (click)="editProject(contentTwo.value, imageTwo.value, linkTwo.value)">Save
-                            changes</button>
+                            (click)="editProject(contentTwo.value, imageTwo.value, linkTwo.value)">Guardar cambios</button>
                     </div>
                 </form>
             </div>

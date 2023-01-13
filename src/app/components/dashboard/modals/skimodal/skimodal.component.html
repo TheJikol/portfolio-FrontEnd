@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="skillCreateModalLabel">Crear Experiencia</h1>
+                <h1 class="modal-title fs-5" id="skillCreateModalLabel">Crear Skill</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -26,8 +26,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"
-                            (click)="createSkill(percent.value, image.value)">Save
-                            changes</button>
+                            (click)="createSkill(percent.value, image.value)">Guardar cambios</button>
                     </div>
                 </form>
             </div>
@@ -39,7 +38,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="skillDeleteModalLabel">Eliminar Experiencia</h1>
+                <h1 class="modal-title fs-5" id="skillDeleteModalLabel">Eliminar Skill</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -55,7 +54,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -66,7 +65,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="skillEditModalLabel">Editar Experiencia</h1>
+                <h1 class="modal-title fs-5" id="skillEditModalLabel">Editar Skill</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -82,7 +81,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -103,7 +102,7 @@
                     Percent?.touched}" class="form-control" id="percent">
                     <div *ngIf="Percent?.errors && Percent?.touched">
                         <p *ngIf="Percent?.hasError('required')" class="text-danger">
-                            El contenido es requerido
+                            El porcentaje es requerido
                         </p>
                     </div>
                     <label class="form-label">URL Imagen</label> <br>
@@ -117,8 +116,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"
-                            (click)="editSkill(percentTwo.value, imageTwo.value)">Save
-                            changes</button>
+                            (click)="editSkill(percentTwo.value, imageTwo.value)">Guardar cambios</button>
                     </div>
                 </form>
             </div>

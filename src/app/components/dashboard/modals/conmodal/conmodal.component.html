@@ -12,13 +12,12 @@
                     Content?.touched}" class="form-control" id="content">
                     <div *ngIf="Content?.errors && Content?.touched">
                         <p *ngIf="Content?.hasError('required')" class="text-danger">
-                            El nombre de usuario es requerido
+                            El contenido es requerido
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" (click)="editContact(content.value)">Save
-                            changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" (click)="editContact(content.value)">Guardar cambios</button>
                     </div>
                 </form>
             </div>

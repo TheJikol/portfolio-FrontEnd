@@ -7,7 +7,7 @@ import { BiographyService } from 'src/app/services/biography.service';
   styleUrls: ['./biography.component.css']
 })
 export class BiographyComponent implements OnInit {
-  myBiography:any;
+  myBiography: any;
   constructor(private BiographyData:BiographyService) { }
 
   ngOnInit(): void {

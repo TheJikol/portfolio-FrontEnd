@@ -8,7 +8,7 @@ import { Contact } from '../models/Contact';
 })
 export class ContactService {
 
-  url:String = "http://localhost:8080/api/";
+  url:String = "https://portfoliobackend-lh3i.onrender.com/api/";
   constructor(private http:HttpClient) {
   }
 

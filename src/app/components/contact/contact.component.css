@@ -23,6 +23,27 @@
 -moz-box-shadow: 1px -17px 11px 5px rgba(116, 29, 255,0.75);
 }
 
+img{
+    width: 70px;
+}
+
+.linkcontainer{
+    margin-top: 50px;
+}
+
+a{
+    margin: 30px;
+}
+
+.copyrightcontainer{
+    margin-top:70px;
+}
+
+.copyright{
+    font-size: 20px;
+}
+
+
 @keyframes  moon{
     0%{
         translate: 0 30px;
