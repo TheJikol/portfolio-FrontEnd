@@ -4,29 +4,27 @@ import { Observable } from 'rxjs';
 import { Project } from '../models/Project';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectService {
 
-  url:String = "https://portfoliobackend-lh3i.onrender.com/api/";
-  constructor(private http:HttpClient) {
+  url: String = 'https://portfoliobackend-lh3i.onrender.com/api/';
+  
+  constructor(private http: HttpClient) {}
+
+  createProject(project: Project) {
+    return this.http.post<any>(this.url + 'create/project', project);
   }
 
-  createProject(project:Project){
-    return this.http.post<any>(this.url + "create/project", project);
+  viewProject(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.url + 'view/project');
   }
 
-  viewProject():Observable<Project[]>{
-    return this.http.get<Project[]>(this.url + "view/project");
+  deleteProject(id: number) {
+    return this.http.delete<any>(this.url + 'delete/project/' + id);
   }
 
-  deleteProject(id:number){
-    return this.http.delete<any>(this.url + "delete/project/" + id);
+  editProject(project: Project, id: number) {
+    return this.http.put<any>(this.url + 'edit/project/' + id, project);
   }
-
-  editProject(project:Project, id:number){
-    console.log(project)
-    return this.http.put<any>(this.url + "edit/project/" + id, project)
-  }
-
 }

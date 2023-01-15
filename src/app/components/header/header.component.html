@@ -24,9 +24,16 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" (click)="experienceButton('contact')">Contacto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/login">Login</a>
-                </li>
+                <div *ngIf="!logueado">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/login">Login</a>
+                    </li>
+                </div>
+                <div *ngIf="logueado">
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="closeSession()">Logout</a>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>

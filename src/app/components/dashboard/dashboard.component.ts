@@ -23,11 +23,11 @@ export class DashboardComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   get Image(){
-    return this.form.get('image')
+    return this.form.get('image');
   }
 
 

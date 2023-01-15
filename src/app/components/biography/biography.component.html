@@ -21,6 +21,9 @@
     </div>
     <div class="biography-text d-flex align-items-center">
         <div class="container textcontainer text-center">
+            <div *ngIf="logueado" class="dashcontainer">
+                <a href="/dashboard" class="dashboard">Dahsboard</a>
+            </div>
             <h2 class="bio">Biografía</h2>
             <p class="text-center">{{myBiography}}</p>
         </div>

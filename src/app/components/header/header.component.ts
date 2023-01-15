@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  logueado :Boolean = false;
+
   constructor() { }
 
   experienceButton(id:string){
@@ -19,6 +21,17 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(sessionStorage.getItem("currentUser")){
+      this.logueado = true;
+    }
+    else{
+      this.logueado = false;
+    }
+  }
+
+  closeSession(){
+    sessionStorage.removeItem("currentUser");
+    window.location.reload();
   }
 
 }

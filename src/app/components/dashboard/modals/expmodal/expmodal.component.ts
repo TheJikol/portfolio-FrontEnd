@@ -32,11 +32,11 @@ export class ExpmodalComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   get Image(){
-    return this.form.get('image')
+    return this.form.get('image');
   }
 
   createExperience(content: String, image:String){
@@ -56,7 +56,7 @@ export class ExpmodalComponent {
 
   saveId(id:number, experience:Experience){
     this.editId = id;
-    this.experienceToEdit = experience
+    this.experienceToEdit = experience;
   }
 
   editExperience(content:String, image:String){
