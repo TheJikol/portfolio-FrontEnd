@@ -25,7 +25,7 @@ export class ConmodalComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   editContact(content:String){

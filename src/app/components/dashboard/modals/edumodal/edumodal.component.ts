@@ -31,11 +31,11 @@ export class EdumodalComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   get Image(){
-    return this.form.get('image')
+    return this.form.get('image');
   }
 
   createEducation(content: String, image:String){
@@ -56,8 +56,6 @@ export class EdumodalComponent {
   saveIdEdu(id:number, education:Education){
     this.editIdEdu = id;
     this.educationToEdit = education
-    console.log(id)
-    console.log(this.editIdEdu)
   }
 
   editEducation(content:String, image:String){
@@ -65,7 +63,7 @@ export class EdumodalComponent {
     let newEducation = new Education(content, image)
     this.EducationData.editEducation(newEducation, this.editIdEdu).subscribe(data =>{
       this.EducationData=data
-      console.log(newEducation)
+      window.location.reload();
 
   })
   }

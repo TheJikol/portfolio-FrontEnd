@@ -25,7 +25,7 @@ export class BiographymodalComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   editBiography(content:String){

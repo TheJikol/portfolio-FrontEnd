@@ -28,41 +28,41 @@ export class SkimodalComponent {
   ngOnInit():void{
     this.SkillData.viewSkill().subscribe(data =>{
     console.log(JSON.stringify(data))
-    this.skills = data})
+    this.skills = data});
   }
 
   get Percent(){
-    return this.form.get('percent')
+    return this.form.get('percent');
   }
 
   get Image(){
-    return this.form.get('image')
+    return this.form.get('image');
   }
 
   createSkill(percent:string, image:String){
     let percentInt = parseInt(percent);
     let newSkill : Skill = new Skill(image, percentInt);
     this.SkillData.createSkill(newSkill).subscribe(data =>{
-      this.SkillData=data
+      this.SkillData=data;
       window.location.reload();
   })
 }
 
   deleteSkill(id:number){
     this.SkillData.deleteSkill(id).subscribe(data =>{
-      this.SkillData=data
+      this.SkillData=data;
       window.location.reload();
   })
   }
 
   saveId(id:number, skill:Skill){
     this.editId = id;
-    this.skillToEdit = skill
+    this.skillToEdit = skill;
   }
 
   editSkill(percent:string, image:String){
     let percentInt = parseInt(percent);
-    let newSkill = new Skill(image, percentInt)
+    let newSkill = new Skill(image, percentInt);
     this.SkillData.editSkill(newSkill, this.editId).subscribe(data =>{
       this.SkillData=data
       window.location.reload();

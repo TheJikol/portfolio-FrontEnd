@@ -32,15 +32,15 @@ export class PromodalComponent {
   }
 
   get Content(){
-    return this.form.get('content')
+    return this.form.get('content');
   }
 
   get Image(){
-    return this.form.get('image')
+    return this.form.get('image');
   }
 
   get Link(){
-    return this.form.get('link')
+    return this.form.get('link');
   }
 
   createProject(content: String, image:String, link:String){
@@ -60,7 +60,7 @@ export class PromodalComponent {
 
   saveId(id:number, project:Project){
     this.editId = id;
-    this.projectToEdit = project
+    this.projectToEdit = project;
   }
 
   editProject(content:String, image:String, link:String){

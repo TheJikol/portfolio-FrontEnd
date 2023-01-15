@@ -3,7 +3,7 @@ export class Experience{
     image: String;
 
     constructor(content:String, image:String){
-        this.content = content
-        this.image = image
+        this.content = content;
+        this.image = image;
     }
 }

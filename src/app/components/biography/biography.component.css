@@ -52,6 +52,29 @@ h2 {
     -ms-user-select: none;
 }
 
+.dashcontainer{
+    margin-bottom: 40px;
+}
+
+.dashboard{
+    border: none;
+    font-size: 25px;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.75);
+}
+
+.dashboard:active{
+    box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.75);
+}
+
 @keyframes image {
     0% {
         translate: 0 -15px;

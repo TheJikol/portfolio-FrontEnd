@@ -38,6 +38,12 @@ h1 {
     transform: scale(1.05);
 }
 
+a{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
 .stars1{
     width: 1px;
     height: 1px;
